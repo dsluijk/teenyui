@@ -1,0 +1,42 @@
+{
+	"name": "teenyui",
+	"version": "0.1.0.",
+	"description": "Tiny UI library for Preact",
+	"main": "index.js",
+	"repository": "git@github.com:dsluijk/teenyui.git",
+	"author": "Dany Sluijk <me@dany.dev>",
+	"license": "GPL-3.0",
+	"alias": {
+		"teenyui": "../src"
+	},
+	"sideEffects": [
+		"./src/index.tsx"
+	],
+	"scripts": {
+		"start": "yarn watch",
+		"watch": "parcel ./src/index.html",
+		"build": "parcel build ./src/index.html --experimental-scope-hoisting",
+		"serve": "yarn build && http-server ./dist -p 1234",
+		"lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx ./src && stylelint './src/**/*.scss'"
+	},
+	"devDependencies": {
+		"@rfgamaral/parcel-plugin-typings-for-css-modules": "^1.0.4",
+		"@types/node": "^14.11.2",
+		"@types/parcel-env": "^0.0.0",
+		"@typescript-eslint/eslint-plugin": "^4.3.0",
+		"@typescript-eslint/parser": "^4.3.0",
+		"autoprefixer": "^9.8.6",
+		"eslint": "^7.10.0",
+		"eslint-config-prettier": "^6.12.0",
+		"postcss": "^7.0.34",
+		"postcss-modules": "^3.2.2",
+		"http-server": "^0.12.3",
+		"parcel-bundler": "^1.12.4",
+		"parcel-plugin-bundle-visualiser": "^1.2.0",
+		"sass": "^1.26.11",
+		"typescript": "^4.0.3"
+	},
+	"dependencies": {
+		"preact": "^10.5.4"
+	}
+}

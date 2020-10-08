@@ -1,0 +1,14 @@
+.button {
+	border: 0;
+	padding: 0.8vh 2vw;
+	margin: 0 1vh 1vw 0;
+	border-radius: 0.3em;
+	cursor: pointer;
+	color: #fff;
+	background-color: var(--primary-color);
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.3;
+	}
+}
